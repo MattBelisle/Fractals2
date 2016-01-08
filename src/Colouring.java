@@ -20,7 +20,7 @@ public class Colouring {
         //System.out.println( Globals.red3+" "+ Globals.green3+ " "+ Globals.blue3);
     }
 
-
+//
     public static void Newton(double rX, double rY, int A) {
         Complex z = new Complex(rX, rY);
         Complex tempZ=z;

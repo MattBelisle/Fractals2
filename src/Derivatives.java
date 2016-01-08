@@ -3,7 +3,7 @@
  */
 public class Derivatives {
     public static void getEquation(){
-
+//
         boolean degreeCheck=false;
         String degreeDigits="";
         String constantDigits="";
@@ -16,13 +16,13 @@ public class Derivatives {
             }
             if(degreeCheck) {
 
-                if(neg==true){
+                if(neg){
                     //get a char for the num
                     char degreeDigit = Globals.equation.charAt(i);
                     //get the char in string
                     degreeDigits = degreeDigits + degreeDigit;
                     Globals.Degree[degreeCount] = Integer.parseInt(degreeDigits)*(-1);
-                } else if(neg==false&&Character.isDigit(Globals.equation.charAt(i))) {
+                } else if(!neg&&Character.isDigit(Globals.equation.charAt(i))) {
                     //get a char for the num
                     char degreeDigit = Globals.equation.charAt(i);
                     //get the char in string

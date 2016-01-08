@@ -37,7 +37,7 @@ public class Calculations {
      */
     public static int Mandelbrot_Set_Black_And_White(double rX, double iY, Complex C) {
         Complex z = new Complex(rX, iY);
-        int Checker = 0;
+        int Checker;
         int iterations = 200;
         while ((iterations >= 0) && (z.abs() <= 2)) {
             z = (z.pow(2)).add(C);
@@ -72,3 +72,4 @@ public class Calculations {
         return percent;
     }
 }
+//

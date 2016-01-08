@@ -42,7 +42,7 @@ class GraphicsPanel extends JPanel {
         //System.out.println(epsilon);
         double ComplexX = Globals.complexX;
         // so the array is only calculated ONCE per zoom should speed up subsequent paints
-        if (Globals.CalcDone == false) {
+        if (!Globals.CalcDone) {
             for (int column = 0; column < Globals.width; column++) {
                 ComplexX += Globals.epsilonX;
                 double ComplexY = Globals.complexY;
@@ -52,7 +52,7 @@ class GraphicsPanel extends JPanel {
                     ComplexY -= Globals.epsilonY;
                     int iterations;
                     Complex C;
-                    if (Man == true) {
+                    if (Man) {
                         C = new Complex(ComplexX, ComplexY);
                     } else {
                         //C = new Complex(0.2, -0.4);
@@ -72,7 +72,7 @@ class GraphicsPanel extends JPanel {
             Globals.CalcDone = true;
 
         }
-        if (Globals.CalcDone == true) {
+        if (Globals.CalcDone) {
             for (int column = 0; column < Globals.width; column++) {
                 System.out.println(column);
                 for (int row = 0; row < Globals.height; row++) {
@@ -88,7 +88,7 @@ class GraphicsPanel extends JPanel {
             }
         }
     }
-
+//
     /**
      * where the making of a uncoloured mandelbrot or julia set is made
      *
@@ -103,7 +103,7 @@ class GraphicsPanel extends JPanel {
         //System.out.println(epsilon);
         double ComplexX = Globals.complexX;
         // so the array is only calculated ONCE per zoom should speed up subsequent paints
-        if (Globals.CalcDone == false) {
+        if (!Globals.CalcDone) {
             for (int column = 0; column < Globals.width; column++) {
                 ComplexX += Globals.epsilonX;
                 double ComplexY = Globals.complexY;
@@ -111,7 +111,7 @@ class GraphicsPanel extends JPanel {
                     ComplexY -= Globals.epsilonY;
                     int Check;
                     Complex C;
-                    if (Man == true) {
+                    if (Man) {
                         C = new Complex(ComplexX, ComplexY);
                     } else {
                         C = new Complex(0.2, -0.4);
@@ -122,7 +122,7 @@ class GraphicsPanel extends JPanel {
             }
             Globals.CalcDone = true;
         }
-        if (Globals.CalcDone == true) {
+        if (Globals.CalcDone) {
             for (int column = 0; column < Globals.width; column++) {
                 for (int row = 0; row < Globals.height; row++) {
                     g2d.setColor(Color.BLACK);
@@ -141,7 +141,7 @@ class GraphicsPanel extends JPanel {
     /**
      * WIP Where a dragon fractal is set up perameters
      *
-     * @param g
+     * @param g haha
      */
     public void dragon(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
@@ -268,8 +268,6 @@ class GraphicsPanel extends JPanel {
                 Globals.green++;
                 //red++;
                 //blue++;
-            } else {
-
             }
         }
     }
@@ -306,14 +304,14 @@ class GraphicsPanel extends JPanel {
 
     public void Man_Julia_gradient(Graphics g) {
         //rgb is for colouring
-        int rgb = 0;
+        int rgb;
         Graphics2D g2d = (Graphics2D) g;
         g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         g2d.setRenderingHint(RenderingHints.KEY_STROKE_CONTROL, RenderingHints.VALUE_STROKE_PURE);
         setBackground(Color.white);
         //System.out.println(epsilon);
         double ComplexX = Globals.complexX;
-        if (Globals.CalcDone == false) {
+        if (!Globals.CalcDone) {
             for (int column = 0; column < Globals.width; column++) {
                 ComplexX += Globals.epsilonX;
                 double ComplexY = Globals.complexY;
@@ -338,7 +336,7 @@ class GraphicsPanel extends JPanel {
             }
         }
         Globals.CalcDone = true;
-        if (Globals.CalcDone == true) {
+        if (Globals.CalcDone) {
             for (int column = 0; column < Globals.width; column++) {
                 for (int row = 0; row < Globals.height; row++) {
                     rgb = Globals.IterationCount[column][row];
