@@ -88,7 +88,7 @@ class GraphicsPanel extends JPanel {
             }
         }
     }
-//
+
     /**
      * where the making of a uncoloured mandelbrot or julia set is made
      *

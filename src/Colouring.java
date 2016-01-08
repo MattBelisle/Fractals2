@@ -17,7 +17,7 @@ public class Colouring {
         Globals.red3=finalRed;
         Globals.green3=finalGreen;
         Globals.blue3=finalBlue;
-        //System.out.println( Globals.red3+" "+ Globals.green3+ " "+ Globals.blue3);
+        //System.out.println( Globals.red3+" "+ Globals.green3+ " "+ Globals.blue3)
     }
 
 //

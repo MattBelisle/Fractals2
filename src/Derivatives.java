@@ -3,7 +3,7 @@
  */
 public class Derivatives {
     public static void getEquation(){
-//
+
         boolean degreeCheck=false;
         String degreeDigits="";
         String constantDigits="";

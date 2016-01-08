@@ -35,7 +35,7 @@ public class Globals {
     public static int[] DerivedConstant = new int[50];
     public static int[] DerivedDegree = new int[50];
     public static int termCount = -1;
-    //
+
     //for dragon
     public static int yLoc = width/2;
     public static int xLoc=height/2;

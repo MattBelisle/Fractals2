@@ -72,4 +72,3 @@ public class Calculations {
         return percent;
     }
 }
-//
